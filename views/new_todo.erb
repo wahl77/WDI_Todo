@@ -1,0 +1,13 @@
+<form method="post" action="/new_todo">
+	Task<input type="text" name="todo_name" value="">
+	Author<input type="text" name="todo_author" value="">
+	<input type="checkbox" name="todo_done" value="1">Done
+
+	<select name="category">
+		<% @categories.each do |cat| %>
+			<option value="<%= cat.id %>"><%= cat.name %> </option>
+		<% end %> 
+	</select>Category
+	<button>Add Todo</button>
+</form>
+

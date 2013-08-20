@@ -1,0 +1,27 @@
+<h1> My Amazing Todo List </h1>
+
+<h2> Here are the todos: </h2>
+<table border="0" width="100%">
+	<thead>
+		<tr> 
+			<td>Name</td>
+			<td>Task</td>
+			<td>Done</td>
+			<td>Category</td>
+		</tr>
+	</thead>
+
+	<% @todos.each do |todo| %>
+		<tr>
+			<td> <%= todo.author %> </td>
+			<td> <%= todo.name %> </td>
+			<td> <% if todo.done %>Done <% else %> Not done <% end %></td>
+			<td> <a href="/list/<%=todo.category.id %>"><%= todo.category.name %></a></td>
+			<td><form method="post" action="/Toggle/<%= todo.id %>"><button type="submit"> Toggle </button></form></td>
+			<td><form method="post" action="/Delete/<%= todo.id %>"><button type="submit"> Delete </button></form></td>
+
+		</tr>
+	<% end %>
+</table>
+<hr / >
+<%= params %> 

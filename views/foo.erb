@@ -1,0 +1,6 @@
+<% @categories.each do |category|%>
+  <h1><%= category.name %></h1>
+  <% category.todo.each do |todo|%>
+	  <%= todo.name %><br>
+	<% end %>
+<% end %>

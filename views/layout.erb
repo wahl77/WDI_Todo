@@ -1,0 +1,21 @@
+<html>
+	<head> 
+		<title> Amazing Todo Site</title>
+		<style>
+			thead {color:sienna;}
+			p {margin-left:20px;}
+			body{ width: 800px; margin: 50px auto;}
+			nav li{ display: inline;  padding: 0px 130px 0px 0px; }
+		</style>
+	</head>
+	<body>
+		<nav> 
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/new_todo">Add to todo</a></li>
+				<li><a href="/new_category">Add a category</a></li>
+			</ul>
+		</nav>
+		<%= yield %>
+	</body>
+</html>
